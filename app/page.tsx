@@ -1,103 +1,118 @@
 import Image from 'next/image';
 import BookingCalendar from '@/components/BookingCalendar';
 
-const safetyPanels = [
-  {
-    title: 'Staircase guardrails',
-    caption: 'Measured, secure installations to reduce stairway risk.',
-    image:
-      'https://images.unsplash.com/photo-1617104600974-c24cbdf4f5b3?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    title: 'Outlet protection',
-    caption: 'Discreet tamper-resistant outlet solutions for every room.',
-    image:
-      'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    title: 'Furniture anchoring',
-    caption: 'Heavy furniture stabilized with premium anti-tip systems.',
-    image:
-      'https://images.unsplash.com/photo-1616594039964-3f6f2e8eb1f4?auto=format&fit=crop&w=1200&q=80'
-  }
-];
+const navLink =
+  'text-[0.8125rem] font-medium uppercase tracking-[0.14em] text-white/95 transition hover:text-white';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-cloud px-6 py-8 text-ink sm:px-10 lg:px-16">
-      <div className="mx-auto w-full max-w-6xl">
-        <header className="flex items-center justify-between">
-          <p className="text-lg tracking-tight text-ink sm:text-xl">babyproofers</p>
+    <>
+      <div className="relative min-h-screen overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <Image
+            src="/family.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[center_35%]"
+            sizes="100vw"
+          />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-black/30"
+            aria-hidden
+          />
+        </div>
+
+        <header className="relative z-20 grid grid-cols-[1fr_auto_1fr] items-start gap-x-4 px-5 pt-7 sm:px-8 sm:pt-9 md:px-12 md:pt-10 lg:px-16">
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 sm:gap-x-7" aria-label="Primary">
+            <a className={navLink} href="#mission">
+              Mission
+            </a>
+            <a className={navLink} href="#impact">
+              Impact
+            </a>
+            <a className={navLink} href="#booking">
+              Labs
+            </a>
+          </nav>
           <a
-            href="#booking"
-            className="rounded-full border border-stone px-4 py-2 text-sm text-ink transition hover:bg-white"
+            href="/"
+            className="justify-self-center pt-0.5 text-center text-lg font-semibold tracking-tight text-white sm:text-xl md:text-[1.35rem]"
           >
-            Contact Us
+            babyproofers
           </a>
+          <nav className="flex flex-wrap justify-end gap-x-5 gap-y-2 sm:gap-x-7" aria-label="Secondary">
+            <a className={navLink} href="#newsroom">
+              Newsroom
+            </a>
+            <a className={navLink} href="#careers">
+              Careers
+            </a>
+          </nav>
         </header>
 
-        <section className="mx-auto mt-20 max-w-3xl text-center">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            making homes safe for the next generation.
+        <section className="relative z-10 flex min-h-[calc(100vh-5.5rem)] flex-col justify-end pb-14 pl-5 sm:min-h-[calc(100vh-6rem)] sm:pb-20 sm:pl-8 md:pb-24 md:pl-12 lg:pb-28 lg:pl-16">
+          <h1 className="font-serif-hero max-w-[12ch] text-[2.35rem] font-semibold leading-[1.06] tracking-[-0.02em] text-white sm:max-w-[14ch] sm:text-5xl md:text-6xl lg:text-[4.25rem] lg:leading-[1.05]">
+            The home safety team
+            <br />
+            designed for your family.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-ink/75 sm:text-lg">
-            Professional home safety assessments and premium installation for Southern
-            California families.
-          </p>
-          <a
-            href="#booking"
-            className="mt-9 inline-flex items-center justify-center rounded-full bg-pine px-8 py-3 text-sm font-semibold text-ink transition hover:brightness-95"
-          >
-            Start for free.
-          </a>
-        </section>
-
-        <section className="mt-20 grid gap-4 md:grid-cols-2">
-          <article className="rounded-3xl border border-stone bg-white/70 p-4 shadow-luxe md:col-span-2">
-            <div className="relative h-64 overflow-hidden rounded-2xl sm:h-80">
-              <Image
-                src={safetyPanels[0].image}
-                alt={safetyPanels[0].title}
-                fill
-                className="object-cover saturate-50"
-              />
-            </div>
-            <h2 className="mt-4 text-xl font-medium text-ink">{safetyPanels[0].title}</h2>
-            <p className="mt-1 text-sm text-ink/70">{safetyPanels[0].caption}</p>
-          </article>
-
-          {safetyPanels.slice(1).map((panel) => (
-            <article key={panel.title} className="rounded-3xl border border-stone bg-white/70 p-4 shadow-luxe">
-              <div className="relative h-56 overflow-hidden rounded-2xl">
-                <Image src={panel.image} alt={panel.title} fill className="object-cover saturate-50" />
-              </div>
-              <h2 className="mt-4 text-lg font-medium text-ink">{panel.title}</h2>
-              <p className="mt-1 text-sm text-ink/70">{panel.caption}</p>
-            </article>
-          ))}
-        </section>
-
-        <section id="booking" className="mt-20 pb-12">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-                Consultation booking calendar
-              </h2>
-              <p className="mt-2 text-sm text-ink/75">
-                Choose a date and reserve your in-home assessment.
-              </p>
-            </div>
-            <a
-              href="#booking"
-              className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-cloud transition hover:bg-[#1f1b18]"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          <BookingCalendar />
         </section>
       </div>
-    </main>
+
+      <div className="bg-cloud px-5 py-16 text-ink sm:px-8 md:px-12 lg:px-16">
+        <div className="mx-auto max-w-6xl">
+          <section id="mission" className="scroll-mt-8 border-b border-stone/60 pb-14">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Mission</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75 sm:text-base">
+              We help families make every room safer with thoughtful assessments, premium hardware, and
+              meticulous installation across Southern California.
+            </p>
+          </section>
+
+          <section id="impact" className="scroll-mt-8 border-b border-stone/60 py-14">
+            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Impact</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/75 sm:text-base">
+              From stair gates to anchored furniture and outlet protection, our work reduces everyday
+              hazards so you can focus on life with little ones.
+            </p>
+          </section>
+
+          <section id="booking" className="scroll-mt-8 pt-4">
+            <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Booking calendar</h2>
+                <p className="mt-2 text-sm text-ink/75">
+                  Choose a date and reserve your in-home assessment.
+                </p>
+              </div>
+              <a
+                href="#booking"
+                className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-cloud transition hover:bg-[#1f1b18]"
+              >
+                Contact Us
+              </a>
+            </div>
+            <BookingCalendar />
+          </section>
+
+          <section id="newsroom" className="scroll-mt-8 border-t border-stone/60 pt-14">
+            <h2 className="text-lg font-semibold tracking-tight">Newsroom</h2>
+            <p className="mt-2 max-w-2xl text-sm text-ink/75">
+              For press and partnerships, reach out through your booking request or contact form—we reply
+              within one business day.
+            </p>
+          </section>
+
+          <section id="careers" className="scroll-mt-8 pb-4 pt-10">
+            <h2 className="text-lg font-semibold tracking-tight">Careers</h2>
+            <p className="mt-2 max-w-2xl text-sm text-ink/75">
+              We hire careful craftspeople and safety consultants in Southern California. Tell us about your
+              experience when you book a consultation call.
+            </p>
+          </section>
+        </div>
+      </div>
+    </>
   );
 }

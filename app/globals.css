@@ -19,7 +19,11 @@ body {
 }
 
 body {
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--font-plex-sans), "IBM Plex Sans", system-ui, sans-serif;
+}
+
+.font-serif-hero {
+  font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
 }
 
 .react-calendar {

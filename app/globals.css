@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f5f0;
+  color: #2e2a27;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.react-calendar {
+  width: 100%;
+  border: 1px solid #d8cfc3;
+  border-radius: 1rem;
+  background: #fffdf9;
+  padding: 0.75rem;
+}
+
+.react-calendar__navigation button {
+  color: #2e2a27;
+  min-width: 44px;
+  border-radius: 0.5rem;
+}
+
+.react-calendar__tile {
+  border-radius: 0.5rem;
+  color: #2e2a27;
+}
+
+.react-calendar__tile--active {
+  background: #ff5a5f;
+  color: #fff;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__navigation button:enabled:hover {
+  background: #f1ebe3;
+}

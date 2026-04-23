@@ -22,12 +22,12 @@ export default function Home() {
           />
         </div>
 
-        <header className="relative z-20 px-5 pt-6 sm:px-8 sm:pt-9 md:px-12 md:pt-10 lg:px-16">
-          <div className="grid grid-cols-[auto_1fr_auto] items-start gap-x-3 md:hidden">
+        <header className="relative z-20 px-4 pt-4 sm:px-8 sm:pt-9 md:px-12 md:pt-10 lg:px-16">
+          <div className="grid grid-cols-[auto_1fr_auto] items-center gap-x-2 md:hidden">
             <details className="relative">
               <summary className="list-none cursor-pointer rounded-md p-1 text-white">
                 <span className="sr-only">Open menu</span>
-                <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
                 </svg>
               </summary>
@@ -43,13 +43,13 @@ export default function Home() {
             </details>
             <a
               href="/"
-              className="font-serif-hero justify-self-center pt-0.5 text-center text-[2.9rem] font-semibold leading-none tracking-[-0.02em] text-white"
+              className="font-serif-hero justify-self-center text-center text-[2.1rem] font-semibold leading-none tracking-[-0.015em] text-white"
             >
               babyproofers
             </a>
             <a
               href="/book-consultation"
-              className="rounded-full bg-white px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.11em] text-ink transition hover:bg-white/90"
+              className="rounded-full bg-white px-3 py-1.5 text-[0.52rem] font-semibold uppercase tracking-[0.1em] text-ink transition hover:bg-white/90"
             >
               Book Consultation
             </a>

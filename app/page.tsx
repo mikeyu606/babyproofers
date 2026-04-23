@@ -96,6 +96,12 @@ export default function Home() {
             <br />
             designed for your family.
           </h1>
+          <a
+            href="/book-consultation"
+            className="mt-6 inline-flex w-fit rounded-full bg-white px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.1em] text-ink transition hover:bg-white/90 sm:mt-7 sm:px-7 sm:py-3 sm:text-sm"
+          >
+            Book Consultation
+          </a>
         </section>
       </div>
 

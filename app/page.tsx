@@ -160,6 +160,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-5 pb-20 pt-8 text-ink sm:px-8 md:px-12 lg:px-16">
+        <div className="mx-auto max-w-5xl rounded-3xl border border-stone/80 bg-cloud px-6 py-10 text-center shadow-luxe sm:px-10 sm:py-12">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-plum">Ready to start</p>
+          <h2 className="font-serif-hero mt-4 text-4xl font-semibold sm:text-5xl">
+            Let&apos;s make your home safer, room by room.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink/75 sm:text-lg">
+            Book a consultation and we&apos;ll build a personalized safety plan based on your layout,
+            child age, and top concerns.
+          </p>
+          <a
+            href="/book-consultation"
+            className="mt-8 inline-flex rounded-full bg-ink px-8 py-3.5 text-sm font-semibold uppercase tracking-[0.09em] text-white transition hover:bg-[#1f1b18]"
+          >
+            Book Consultation
+          </a>
+        </div>
+      </section>
+
       <footer id="footer" className="bg-[#121314] px-5 pb-6 pt-12 text-white sm:px-8 md:px-12 lg:px-16">
         <div className="mx-auto max-w-7xl border-t border-white/15 pt-10">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:gap-16">

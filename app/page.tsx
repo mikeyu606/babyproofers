@@ -22,32 +22,72 @@ export default function Home() {
           />
         </div>
 
-        <header className="relative z-20 grid grid-cols-[1fr_auto_1fr] items-start gap-x-4 px-5 pt-7 sm:px-8 sm:pt-9 md:px-12 md:pt-10 lg:px-16">
-          <nav className="flex flex-wrap gap-x-5 gap-y-2 sm:gap-x-7" aria-label="Primary">
-            <a className={navLink} href="#approach">
-              Mission
+        <header className="relative z-20 px-5 pt-6 sm:px-8 sm:pt-9 md:px-12 md:pt-10 lg:px-16">
+          <div className="grid grid-cols-[auto_1fr_auto] items-start gap-x-3 md:hidden">
+            <details className="relative">
+              <summary className="list-none cursor-pointer rounded-md p-1 text-white">
+                <span className="sr-only">Open menu</span>
+                <svg viewBox="0 0 24 24" className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+                </svg>
+              </summary>
+              <nav className="absolute left-0 top-12 w-56 rounded-2xl bg-black/70 p-4 backdrop-blur" aria-label="Mobile Menu">
+                <div className="flex flex-col gap-3">
+                  <a className={navLink} href="#approach">Mission</a>
+                  <a className={navLink} href="#labs">Impact</a>
+                  <a className={navLink} href="#labs">Labs</a>
+                  <a className={navLink} href="/how-we-do-it">How We Do It</a>
+                  <a className={navLink} href="/packages">Packages</a>
+                </div>
+              </nav>
+            </details>
+            <a
+              href="/"
+              className="font-serif-hero justify-self-center pt-0.5 text-center text-[2.9rem] font-semibold leading-none tracking-[-0.02em] text-white"
+            >
+              babyproofers
             </a>
-            <a className={navLink} href="#labs">
-              Impact
+            <a
+              href="/book-consultation"
+              className="rounded-full bg-white px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.11em] text-ink transition hover:bg-white/90"
+            >
+              Book Consultation
             </a>
-            <a className={navLink} href="#labs">
-              Labs
+          </div>
+
+          <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-start md:gap-x-4">
+            <nav className="flex flex-wrap gap-x-5 gap-y-2 sm:gap-x-7" aria-label="Primary">
+              <a className={navLink} href="#approach">
+                Mission
+              </a>
+              <a className={navLink} href="#labs">
+                Impact
+              </a>
+              <a className={navLink} href="#labs">
+                Labs
+              </a>
+            </nav>
+            <a
+              href="/"
+              className="justify-self-center pt-0.5 text-center text-lg font-semibold tracking-tight text-white sm:text-xl md:text-[1.35rem]"
+            >
+              babyproofers
             </a>
-          </nav>
-          <a
-            href="/"
-            className="justify-self-center pt-0.5 text-center text-lg font-semibold tracking-tight text-white sm:text-xl md:text-[1.35rem]"
-          >
-            babyproofers
-          </a>
-          <nav className="flex flex-wrap justify-end gap-x-5 gap-y-2 sm:gap-x-7" aria-label="Secondary">
-            <a className={navLink} href="#footer">
-              Newsroom
-            </a>
-            <a className={navLink} href="#footer">
-              Careers
-            </a>
-          </nav>
+            <nav className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 sm:gap-x-5" aria-label="Secondary">
+              <a className={navLink} href="/how-we-do-it">
+                How We Do It
+              </a>
+              <a className={navLink} href="/packages">
+                Packages
+              </a>
+              <a
+                href="/book-consultation"
+                className="rounded-full bg-white px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.09em] text-ink transition hover:bg-white/90"
+              >
+                Book Consultation
+              </a>
+            </nav>
+          </div>
         </header>
 
         <section className="relative z-10 flex min-h-[calc(100vh-5.5rem)] flex-col justify-end pb-14 pl-5 sm:min-h-[calc(100vh-6rem)] sm:pb-20 sm:pl-8 md:pb-24 md:pl-12 lg:pb-28 lg:pl-16">
@@ -82,7 +122,7 @@ export default function Home() {
                 down the hall.
               </p>
               <a
-                href="#footer"
+                href="/how-we-do-it"
                 className="mt-8 inline-flex w-fit rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-[#1f1b18]"
               >
                 How we do it
@@ -135,7 +175,7 @@ export default function Home() {
                 <ul className="mt-4 space-y-2.5 text-[1rem] font-semibold">
                   <li><a href="#approach" className="hover:text-white/75">Mission</a></li>
                   <li><a href="#labs" className="hover:text-white/75">Labs</a></li>
-                  <li><a href="#approach" className="hover:text-white/75">How We Work</a></li>
+                  <li><a href="/how-we-do-it" className="hover:text-white/75">How We Work</a></li>
                   <li><a href="mailto:hello@babyproofers.com" className="hover:text-white/75">Contact</a></li>
                 </ul>
               </div>
@@ -143,8 +183,8 @@ export default function Home() {
               <div>
                 <p className="text-sm text-white/60">Resources</p>
                 <ul className="mt-4 space-y-2.5 text-[1rem] font-semibold">
-                  <li><a href="#" className="hover:text-white/75">Safe Home Tips</a></li>
-                  <li><a href="#" className="hover:text-white/75">FAQ</a></li>
+                  <li><a href="/packages" className="hover:text-white/75">Service Packages</a></li>
+                  <li><a href="/book-consultation" className="hover:text-white/75">Book Consultation</a></li>
                   <li><a href="#" className="hover:text-white/75">Trust &amp; Safety</a></li>
                   <li><a href="#" className="hover:text-white/75">Press</a></li>
                 </ul>
